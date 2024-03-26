@@ -85,7 +85,7 @@ def version_compare(v1, v2):
     The result is 0 if v1 == v2, -1 if v1 < v2, and +1 if v1 > v2
     """
     for v1_part, v2_part in zip(v1.split("."), v2.split(".")):
-        if v1_part.isdecimal() and v2_part.isdecimal():
+        if unicode(v1_part).isdecimal() and unicode(v2_part).isdecimal():
             if int(v1_part) > int(v2_part):
                 return 1
             elif int(v1_part) < int(v2_part):
